@@ -42,6 +42,7 @@ requirements:
 
   run:
     - r-base
+    - r-assertthat
     - r-bh >=1.58.0_1
     - r-r6
     - r-rcpp >=0.12.6
