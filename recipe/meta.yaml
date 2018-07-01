@@ -1,4 +1,4 @@
-{% set version = '0.7.4' %}
+{% set version = "0.7.6" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/dplyr_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/dplyr/dplyr_{{ version }}.tar.gz
-  sha256: 7b1fc90750fbb46483423da6721832c545d37b157f4f3355784a65e50fada8c2
+  sha256: d489cc8b53854ec30737bb7d39b331b67ca35f4275ad19e97420d7a247808330
 
 build:
   number: 0
