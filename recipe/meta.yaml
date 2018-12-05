@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dplyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dplyr/dplyr_{{ version }}.tar.gz
-  sha256: d489cc8b53854ec30737bb7d39b331b67ca35f4275ad19e97420d7a247808330
+  sha256: 37799ac5734d14b14ab9594ddec7f79e9a798907b87ff8b2d281a148a14de51a
 
 build:
   merge_build_host: True  # [win]
@@ -81,3 +81,4 @@ extra:
     - jdblischak
     - cbrueffer
     - dbast
+    - philip-khor
