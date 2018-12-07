@@ -7,7 +7,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: dplyr_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/dplyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dplyr/dplyr_{{ version }}.tar.gz
@@ -16,7 +15,6 @@ source:
 build:
   merge_build_host: True  # [win]
   number: 1000
-  skip: true  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,6 +43,7 @@ requirements:
     - r-rlang >=0.3.0
     - r-tibble >=1.4.2
     - r-tidyselect >=0.2.3
+    - openblas                   # [osx]
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
@@ -60,6 +59,7 @@ requirements:
     - r-rlang >=0.3.0
     - r-tibble >=1.4.2
     - r-tidyselect >=0.2.3
+    - openblas                   # [osx]
 
 test:
   commands:
