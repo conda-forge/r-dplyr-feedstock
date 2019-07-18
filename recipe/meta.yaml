@@ -68,6 +68,7 @@ about:
   license: MIT
   summary: A fast, consistent tool for working with data frame like objects, both in memory and
     out of memory.
+  license_file: LICENSE.txt
   license_family: MIT
 
 extra:
