@@ -1,4 +1,4 @@
-{% set version = "0.8.4" %}
+{% set version = "0.8.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dplyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dplyr/dplyr_{{ version }}.tar.gz
-  sha256: 811803d5f13eb21ad8811060da384d92fe7489714014c5959deb2f8977ada0d9
+  sha256: 5750d3bf4bda7b5448e08af264ed183b4f7bd0c59a9d828fe9dd399b14590218
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -33,6 +33,7 @@ requirements:
   host:
     - r-base
     - r-bh
+    - r-ellipsis
     - r-r6
     - r-rcpp >=1.0.1
     - r-assertthat >=0.2.0
@@ -48,6 +49,7 @@ requirements:
     - {{native}}gcc-libs         # [win]
     # BH is the header-only part of Boost and thus a compile-time requirement only
     # - r-bh
+    - r-ellipsis
     - r-r6
     - r-rcpp >=1.0.1
     - r-assertthat >=0.2.0
@@ -67,10 +69,9 @@ test:
 about:
   home: http://dplyr.tidyverse.org, https://github.com/tidyverse/dplyr
   license: MIT
-  summary: A fast, consistent tool for working with data frame like objects, both in memory and
-    out of memory.
-  license_file: 
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+  summary: A fast, consistent tool for working with data frame like objects, both in memory and out of memory.
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
   license_family: MIT
 
