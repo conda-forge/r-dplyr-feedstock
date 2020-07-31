@@ -1,4 +1,4 @@
-{% set version = '1.0.0' %}
+{% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dplyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dplyr/dplyr_{{ version }}.tar.gz
-  sha256: bfb65131cd24d891e671999be29e6dfebb3eefa41c262dbc7a13d7c0ff3db1f3
+  sha256: 55f757adc122dc39009739c03a32c8182e6e2f7ad697fcc0711ee1e56cf80d3e
 
 build:
   merge_build_host: true  # [win]
@@ -44,7 +44,7 @@ requirements:
     - r-vctrs >=0.3.0
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-r6
     - r-ellipsis
     - r-generics
@@ -64,11 +64,10 @@ test:
 about:
   home: https://dplyr.tidyverse.org, https://github.com/tidyverse/dplyr
   license: MIT
-  summary: A fast, consistent tool for working with data frame like objects, both in memory and
-    out of memory.
+  summary: A fast, consistent tool for working with data frame like objects, both in memory and out of memory.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
