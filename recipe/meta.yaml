@@ -1,4 +1,4 @@
-{% set version = "1.0.3" %}
+{% set version = "1.0.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dplyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dplyr/dplyr_{{ version }}.tar.gz
-  sha256: 28a1a9d87e99154d4d1542ef9da9fd70f869a173dc9709f4583a5770bae58441
+  sha256: 9bf68f71d1519432bad08089fc254b872c990c5a40b32a7e63b03d49f88e093a
 
 build:
   merge_build_host: true  # [win]
