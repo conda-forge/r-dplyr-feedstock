@@ -1,11 +1,22 @@
+About r-dplyr-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-dplyr-feedstock/blob/main/LICENSE.txt)
+
 About r-dplyr
-=============
+-------------
 
 Home: https://dplyr.tidyverse.org, https://github.com/tidyverse/dplyr
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-dplyr-feedstock/blob/main/LICENSE.txt)
+Summary: A fast, consistent tool for working with data frame like objects, both in memory and out of memory.
+About r-dplyr
+-------------
+
+Home: https://dplyr.tidyverse.org, https://github.com/tidyverse/dplyr
+
+Package license: MIT
 
 Summary: A fast, consistent tool for working with data frame like objects, both in memory and out of memory.
 
