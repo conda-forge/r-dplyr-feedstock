@@ -1,4 +1,4 @@
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dplyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dplyr/dplyr_{{ version }}.tar.gz
-  sha256: a82c292f2249d439157986b504edd1d99741f467c75bf08969254ca8d441bfa3
+  sha256: 18d66fe2f24cda8b619c177326d39dd015229ab99695fa67d3fa31e4569390e0
 
 build:
   number: 0
